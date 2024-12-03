@@ -26,12 +26,24 @@ body {
 
 /* Logo Container */
 .logo-container {
-  margin-left: 20px; /* Adds margin from the left side of the window */
+  display: flex;
+  align-items: center; /* Align items (logo and text) vertically */
+  margin-left: 14vw; /* Adds margin from the left side of the window */
+  flex-wrap: nowrap; /* Prevent wrapping */
+  white-space: nowrap; /* Keep text in a single line */
+  color: #f1f1f1;
 }
+  
 
 .logo {
   height: 40px; /* Set a height for the logo */
   width: auto; /* Maintain aspect ratio */
+}
+
+.logo-text {
+  margin-left: 10px; /* Space between logo and text */
+  font-size: 18px; /* Adjust text size */
+  line-height: 1; /* Ensure text aligns with the logo */
 }
 
 /* Navigation link style */
@@ -39,6 +51,8 @@ body {
   display: flex;
   justify-content: flex-end; /* Align the links to the right */
   align-items: center; /* Vertically center the items */
+  margin-left: 14vw; /* Adds margin from the left side of the window */
+  margin-right: 14vw; /* Adds margin from the left side of the window */
 }
 
 .nav-link {
@@ -57,7 +71,6 @@ body {
   color: #f1f1f1;
   transform: scale(1.0);
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-
 }
 
 .nav-link:active {
@@ -104,7 +117,7 @@ body {
   background-color: #4CAF50;
   margin-top: 2px;
   margin-right: 20px;
-  min-width: 140px;
+  min-width:max-content;
   border-radius: 8px;
   
   z-index: 1;
@@ -137,6 +150,7 @@ main {
   justify-content: center; /* Center content horizontally */
   align-items: center; /* Center content vertically */
   padding: 20px;
+  margin-left: 10vw; /* Adds margin from the left side of the window */
 }
 
 /* Main Content Layout */
@@ -175,9 +189,10 @@ main {
 
 .profile-image {
   width: 90%; /* Adjust image size to 80% of container width */
-  max-width: 60%; /* Set a maximum width for the image */
+  max-width: 75%; /* Set a maximum width for the image */
   height: auto;
   border-radius: 50%; /* Optional: make the image circular */
+  /*box-shadow: 0px 0px 50px rgba(0, 0, 0, .3);  Drop shadow */
 }
 
 /* Footer Box Style */
@@ -209,10 +224,21 @@ main {
 
 /* Responsive Design: On smaller screens, the layout changes */
 @media (max-width: 768px) {
+  .header-box {
+    flex-direction: column; /* Stack header items vertically */
+    align-items: center;
+    padding: 10px;
+  }
+
   .main-content {
     flex-direction: column; /* Stack the text and image vertically */
     text-align: center; /* Center the text */
   }
+
+  .image-container {
+    order: -1; /* Move the image above the text */
+  }
+
   .text-container, .image-container {
     width: 100%; /* Full width for both text and image containers */
     padding: 10px; /* Less padding on smaller screens */
