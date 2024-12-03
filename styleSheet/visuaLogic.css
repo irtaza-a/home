@@ -42,12 +42,19 @@ body {
   margin: 0 15px;
   text-decoration: none;
   font-weight: bold;
-  transition: color 0.3s;
+  transition: color 0.3s, transform 0.2s, box-shadow 0.2s;
 }
 
 /* Hover effect for links */
 .nav-link:hover {
   color: #f1f1f1;
+  transform: scale(1.1);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.nav-link:active {
+  transform: scale(1.05);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.4);
 }
 
 /* Dropdown Button */
@@ -58,16 +65,27 @@ body {
 }
 
 .dropbtn {
-  background-color: transparent;
+  background-color: transparent; /* Same as the other buttons */
   color: white;
   font-size: 18px;
   border: none;
   cursor: pointer;
-  padding: 10px 20px;
+  /* padding: 10px 20px; */
+  font-weight: bold;
+  transition: color 0.3s, transform 0.2s, box-shadow 0.2s;
+  /* Match styling with nav-link */
 }
 
 .dropbtn:hover {
-  background-color: #3e8e41;
+  /* background-color: #3e8e41; /Same hover background as the nav-link  */
+  transform: scale(1.1); /* Same hover effect */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Same shadow effect */
+}
+
+.dropbtn:active {
+  background-color: #3b7c3a; /* Same active background color */
+  transform: scale(1.05); /* Same active effect */
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.4); /* Same shadow on click */
 }
 
 /* Dropdown Content (hidden by default) */
@@ -75,7 +93,9 @@ body {
   display: none;
   position: absolute;
   background-color: #4CAF50;
-  min-width: 160px;
+  margin-top: 2px;
+  margin-right: 20px;
+  min-width: 140px;
   z-index: 1;
 }
 
@@ -147,7 +167,7 @@ main {
 
 /* Footer Box Style */
 .footer-box {
-  background-color: #333; 
+  background-color: #333;
   color: #ffffff;
   text-align: center;
   padding: 20px;
