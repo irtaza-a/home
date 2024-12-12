@@ -9,45 +9,40 @@
         <link rel="stylesheet" href="./styleSheet/visuaLogic.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
     </head>
-    
     <body id="mainPage_BG">
-        
-<!-- Header Box -->
-<div class="header-box">
-    <div class="logo-container">
-        <a href="https://irtaza-a.github.io/home/">
-            <!-- <img src="/images/logo.png" alt="Logo" class="logo" style="transform: scale(1.5);"> -->
-            <img src="https://raw.githubusercontent.com/irtaza-a/home/16d3ac7247f86b88eac044e857adc52f2eb94b3e/images/logo_full.svg" alt="Logo" class="logo" style="transform: scale(1.5);">
-        </a>
-        <span class="logo-text" style="font-weight:bolder;padding-left: 4%;">Irtaza Ansari's Portfolio</span> <!-- Using span for inline text -->
-    </div>
-    <div class="nav-container">
-        <!-- <a href="#" class="nav-link">About</a> -->
-        <!-- Course Work Dropdown -->
-        <div class="dropdown">
-            <button class="dropbtn">Projects</button>
-            <div class="dropdown-content">
-                <a href="#">CPSC 581 Projects</a>
-                <a href="#">CPSC 584</a>
-                <a href="#">CPSC 599.90</a>
+        <!-- Header Box -->
+        <div class="header-box">
+            <div class="logo-container">
+                <a href="/index.html">
+                    <!-- <img src="https://raw.githubusercontent.com/irtaza-a/home/16d3ac7247f86b88eac044e857adc52f2eb94b3e/images/logo_full.svg"  -->
+                    <img src="/images/logo_full.svg" 
+                         alt="Logo" class="logo" style="transform: scale(1.5);">
+                </a>
+                <span class="logo-text" style="font-weight:bolder;padding-left: 4%;">Irtaza Ansari's Portfolio</span>
+            </div>
+            <div class="nav-container">
+                <div class="dropdown">
+                    <button class="dropbtn">Projects</button>
+                    <div class="dropdown-content">
+                        <a href="#">CPSC 581 Projects</a>
+                        <a href="#">CPSC 584</a>
+                        <a href="#">CPSC 599.90</a>
+                    </div>
+                </div>
+                <a href="/pages/03_resume.html" class="nav-link">Resume</a>
+                <a href="/pages/04_contact.html" class="nav-link">Contact</a>
             </div>
         </div>
-        <a href="https://irtaza-a.github.io/home/pages/03_resume.html" class="nav-link">Resume</a>
-        <a href="https://irtaza-a.github.io/home/pages/04_contact.html" class="nav-link">Contact</a>
-    </div>
-</div>
         
         <!-- Main Content -->
         <main>
             <section class="main-content">
-                <!-- Text Container (Now on the left) -->
                 <div class="text-container" style="margin-left: 10vw;">
                     <h1>Hello There!</h1>
-                    <p>Hello! Welcome to my website where I share my journey in computer science, including projects, skills, and aspirations.</p>
+                    <p>Welcome to my portfolio website where I share my journey in computer science, including projects, skills, and aspirations.</p>
                     <p>I recently graduated with a Bachelor of Science in Computer Science from the University of Calgary, and I'm excited to dive into the tech world.</p>
                     <p>Feel free to explore my work and connect with me through social media or email!</p>
                 </div>
-                <!-- Image Container (Now on the right) -->
                 <div class="image-container">
                     <img src="./images/wa_dp.png" alt="Your Picture" class="profile-image">
                 </div>
@@ -57,11 +52,9 @@
         <!-- Footer Box -->
         <footer class="footer-box">
             <p>© 2024 Irtaza Ansari.</p>
-            <!-- <nav>
-                <a href="https://www.linkedin.com/in/irtaza-ansari-a1367b82/" class="footer-link">LinkedIn</a>
-                <a href="https://github.com/irtaza-a/" class="footer-link">GitHub</a>
-            </nav> -->
         </footer>
 
+        <!-- JavaScript -->
+        <script type="module" src="./scripts/logic.js"></script>
     </body>
 </html>
