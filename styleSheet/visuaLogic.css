@@ -8,10 +8,9 @@ html, body {
 }
 
 .nav-container a {
-  position: relative;
-  z-index: 100;
+    position: relative;
+    z-index: 100;
 }
-
 .contact-info {
   /* position: absolute; Position it absolutely within the parent container */
   /* margin-top: 20%; Center vertically */

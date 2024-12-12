@@ -1,0 +1,260 @@
+/* Reset basic styles */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    font-family: 'Gotham Book', sans-serif;
+    background-color: #ffffff;
+}
+
+/* Flex container to push footer down */
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Header Styles */
+.header-box {
+    display: flex;
+    align-items: center; /* Vertically center the items */
+    justify-content: space-between; /* Space out the logo and navigation */
+    background-color: #4CAF50; /* Green background */
+    padding: 14px 20px; /* Add padding around the content */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Logo Container */
+.logo-container {
+    display: flex;
+    align-items: center; /* Align items (logo and text) vertically */
+    margin-left: 14vw; /* Adds margin from the left side of the window */
+    flex-wrap: nowrap; /* Prevent wrapping */
+    white-space: nowrap; /* Keep text in a single line */
+    color: #f1f1f1;
+}
+
+.logo {
+    height: 40px; /* Set a height for the logo */
+    width: auto; /* Maintain aspect ratio */
+}
+
+.logo-text {
+    margin-left: 10px; /* Space between logo and text */
+    font-size: 18px; /* Adjust text size */
+    line-height: 1; /* Ensure text aligns with the logo */
+}
+
+/* Navigation Container */
+.nav-container {
+    display: flex;
+    justify-content: flex-end; /* Align the links to the right */
+    align-items: center; /* Vertically center the items */
+    margin-left: 14vw; /* Adds margin from the left side of the window */
+    margin-right: 14vw; /* Adds margin from the left side of the window */
+}
+
+/* Navigation Links */
+.nav-link {
+    color: #ffffff;
+    font-size: 18px;
+    margin: 0 15px; /* Align it with other buttons */
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px; /* Add padding to ensure the button looks good */
+    border-radius: 8px;
+}
+
+/* Hover effect for links */
+.nav-link:hover {
+    color: #f1f1f1;
+    transform: scale(1.0);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.nav-link:active {
+    transform: scale(1.0);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.4);
+    border-radius: 8px;
+}
+
+/* Dropdown Button */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin: 0 15px; /* Align it with other buttons */
+    border-radius: 8px;
+}
+
+.dropbtn {
+    background-color: transparent; /* Same as the other buttons */
+    color: white;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 5px 10px; /* Add padding to ensure the button looks good */
+}
+
+.dropbtn:hover {
+    transform: scale(1.0); /* Same hover effect */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Same shadow effect */
+    border-radius: 8px;
+}
+
+.dropbtn:active {
+    background-color: #3b7c3a; /* Same active background color */
+    transform: scale(1.00); /* Same active effect */
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.4); /* Same shadow on click */
+}
+
+/* Dropdown Content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #4CAF50;
+    margin-top: 2px;
+    margin-right: 20px;
+    min-width: max-content;
+    border-radius: 8px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-radius: 8px;
+}
+
+.dropdown-content a:hover {
+    background-color: #e4e4e4;
+    color: #333; /* Adjust the text color when hovering */
+}
+
+/* Show the dropdown menu when hovering over the button */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Contact Info */
+.contact-info p {
+    font-size: 2rem;
+    text-align: center;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Contact Boxes */
+.contact-box-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 by 2 grid */
+    grid-row-gap: 45px; /* Vertical gap between rows */
+    grid-column-gap: 45px; /* Horizontal gap between columns */
+    max-width: 100vw; /* Limits the container's width */
+    margin: 0 auto;
+    margin-top: 20px; /* Added space from top */
+}
+
+.contact-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    height: 80px; /* Reduced height for a more rectangular shape */
+    text-align: left;
+    height: 14vh;
+    width: 40vw;
+}
+
+.contact-box:hover {
+    /* transform: scale(1.05); */
+    transition: 0.3s;
+}
+
+.image-text-content {
+    display: flex;
+    align-items: center;
+    gap: 3vw;
+}
+
+.box-image {
+    margin-left: 2vw;
+    max-width: 12vh;
+    max-height: 12vh;
+}
+
+.contact-link {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 5px; /* Reduce gap between text and link */
+}
+
+.contact-link:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+.footer-box {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .contact-box-container {
+        grid-template-columns: 1fr; /* Single column layout */
+        gap: 15px; /* Uniform gap between all boxes */
+    }
+
+    .contact-box {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+        height: 100px; /* Reduced height for better proportions */
+    }
+
+    .box-image {
+        margin: 0;
+        max-width: 40px; /* Adjust image size */
+        max-height: 40px;
+    }
+
+    .logo-container {
+        margin-left: 10vw; /* Adjust margin for smaller screens */
+    }
+
+    .nav-link {
+        font-size: 16px; /* Smaller font size for mobile */
+        padding: 5px 8px; /* Adjust padding for mobile */
+    }
+
+    .dropbtn {
+        font-size: 16px; /* Smaller font size for mobile */
+        padding: 5px 8px; /* Adjust padding for mobile */
+    }
+
+    .dropbtn:hover, .nav-link:hover {
+        /* transform: scale(1.0); Same hover effect */
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Same shadow effect */
+    }
+}
