@@ -9,8 +9,8 @@ html, body {
 
 body {
     font-family: 'Gotham Book', sans-serif;
-    background-color: #ffffff;
-}
+    background-color: #232323;
+  }
 
 /* Flex container to push footer down */
 main {
@@ -48,9 +48,15 @@ main {
 }
 
 .logo-text {
-    margin-left: 10px; /* Space between logo and text */
-    font-size: 18px; /* Adjust text size */
-    line-height: 1; /* Ensure text aligns with the logo */
+    color: white; /* Sets text color to white */
+    text-decoration: none; /* Removes underline */
+    font-weight: bolder; /* Ensures bold text */
+    margin-left: 4%; /* Adjusts spacing from logo */
+}
+
+.logo-text:hover {
+    /* color: #f1f1f1; Optional: Slight color change on hover for better user experience */
+    color: white; /* Optional: Slight color change on hover for better user experience */
 }
 
 /* Navigation Container */
@@ -151,7 +157,9 @@ main {
     font-size: 2rem;
     text-align: center;
     font-weight: bold;
-    color: #333;
+    /* color: #333; */
+    /* color: #cac5c5; */
+    color: white;
 }
 
 /* Contact Boxes */
@@ -210,14 +218,15 @@ main {
 
 /* Footer */
 .footer-box {
-    background-color: #333;
-    color: white;
+    background-color:  #363636;
+    color: #cac5c5;
     text-align: center;
-    padding: 10px 0;
+    font-size: 12pt;
+    padding: 10px;
     position: relative;
     bottom: 0;
     width: 100%;
-}
+  }
 
 /* Responsive Design */
 @media (max-width: 600px) {

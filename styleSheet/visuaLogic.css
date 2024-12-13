@@ -1,45 +1,28 @@
-/* Reset some basic styles for the body */
+/* Reset basic styles */
 html, body {
-  height: 100%;
   margin: 0;
   padding: 0;
+  height: 100%;
   display: flex;
   flex-direction: column;
 }
 
-.nav-container a {
-    position: relative;
-    z-index: 100;
-}
-.contact-info {
-  /* position: absolute; Position it absolutely within the parent container */
-  /* margin-top: 20%; Center vertically */
-  left: 50%; /* Center horizontally */
-  transform: translate(0%, 200%); /*Correct centering by moving the element back by 50% of its size */
-  text-align: center;
-  /* font-size: 1rem; Adjust font size as needed */
-  font-weight: bold;
-  color: #333; /* Adjust color as per your design */
-}
-
-.contact-info p {
-  margin: 0; /* Removes default margin to avoid misalignment */
-  /* margin-top: -10%; */
-  font-size: 4rem; /*Adjust font size for visibility*/
-  font-weight: bold; /* Optional: make the text bold */
-  color: #333; /* Adjust color as per your design */
-}
-
-/* Apply Gotham Book font to the entire body */
 body {
   font-family: 'Gotham Book', sans-serif;
-  display: flex;
-  flex-direction: column;
-  background-color: #ffffff; /* White background */
-  overflow: hidden; /* Prevents any unwanted scroll or overflow */
+  background-color: #232323;
 }
 
-/* Header Box Style */
+/* Flex container to push footer down */
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Header Styles */
 .header-box {
   display: flex;
   align-items: center; /* Vertically center the items */
@@ -58,7 +41,6 @@ body {
   white-space: nowrap; /* Keep text in a single line */
   color: #f1f1f1;
 }
-  
 
 .logo {
   height: 40px; /* Set a height for the logo */
@@ -66,107 +48,34 @@ body {
 }
 
 .logo-text {
-  margin-left: 10px; /* Space between logo and text */
-  font-size: 18px; /* Adjust text size */
-  line-height: 1; /* Ensure text aligns with the logo */
+  color: white; /* Sets text color to white */
+  text-decoration: none; /* Removes underline */
+  font-weight: bolder; /* Ensures bold text */
+  margin-left: 4%; /* Adjusts spacing from logo */
 }
 
-/* Contact Box Container Style */
-.contact-box-container {
-  transform: translate(0%, 30%);
-  display: grid; /* Enable grid layout */
-  grid-template-columns: repeat(2, 1fr); /* 2 columns of equal width */
-  gap: 50px; /* Space between grid items */
-  padding: 20px; /* Add padding around the grid */
-  background-color: #f4f4f4; /* Optional: background color for the grid */
-  /* justify-items: center; Center items horizontally */
-  /* align-items: center; Center items vertically */
+.logo-text:hover {
+  color: white; /* Optional: Slight color change on hover for better user experience */
 }
 
-
-/* Style for each box */
-.contact-box {
-  display: flex; /* Align items horizontally */
-  flex-direction: column;
-  width: 35vw; /* Fixed width of each box */
-  height: 150px; /* Fixed height of each box */
-  background-color: #4CAF50; /* Box background color */
-  color: white; /* Text color */
-  font-size: 16px; /* Text size */
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-  border-radius: 8px; /* Optional: rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: add shadow */
-  text-align: center; /* Center text inside the box */
-  /* transition: transform 0.3s; Add hover effect */
-  font-weight: 900;
-  font-size: x-large;
-}
-
-
-/* Styling for image-text combination box */
-/* Adjust the layout inside the contact box for image and text */
-.image-text-content {
-  display: flex; /* Align items horizontally */
-  align-items:center; /* Vertically center image and text */
-  gap: 20px; /* Space between image and text */
-  height: 100%; /* Ensure the content takes the full height of the box */
-}
-
-/* Style for the image */
-.box-image {
-  margin-left: -5%;
-  display: flex;
-  flex-direction: row;
-  max-height: 70px; /* Scale image to fit inside the box height */
-  max-width: 110px; /* Limit the width of the image */
-  width: auto; /* Maintain the image's aspect ratio */
-  height: auto; /* Dynamically adjust the height */
-  transform: scale(0.87,0.87);
-  /* transform: translate(-20%, 0%); */
-  border: radius 4px; /*Optional: round the edges of the image*/
-  /* white-space: nowrap; */
-  /* justify-content: center; */ /* Center text horizontally within the text area */
-  align-items: center; /* Center text vertically */
-  text-align: left; /* Align text to the left */
-}
-
-/* Style for the text */
-.box-text {
-  flex: 1; /* Allow the text to fill remaining space */
-  /* font-size: 1rem; Adjust text size */
-  /* font-weight: 900; Bold text */
-  display: flex; /* Use flex for vertical alignment */
-  justify-content: center; /* Center text horizontally within the text area */
-  align-items: center; /* Center text vertically */
-  text-align: left; /* Align text to the left */
-  /* overflow-wrap: break-word; Wrap long text within the box */
-}
-
-/* Image style */
-.image-left {
-  height: 100%; /* Height for the image */
-  width: 100%; /* Maintain aspect ratio */
-}
-
-/* Navigation link style */
+/* Navigation Container */
 .nav-container {
   display: flex;
   justify-content: flex-end; /* Align the links to the right */
   align-items: center; /* Vertically center the items */
   margin-left: 14vw; /* Adds margin from the left side of the window */
-  margin-right: 14vw; /* Adds margin from the left side of the window */
+  margin-right: 14vw; /* Adds margin from the right side of the window */
 }
 
+/* Navigation Links */
 .nav-link {
   color: #ffffff;
   font-size: 18px;
-  margin: 0 15px; /*Align it with other buttons */
+  margin: 0 15px; /* Align it with other buttons */
   text-decoration: none;
   font-weight: bold;
-  /* transition: color 0.3s, transform 0.2s, box-shadow 0.2s; */
-  border-radius: 8px;
   padding: 5px 10px; /* Add padding to ensure the button looks good */
+  border-radius: 8px;
 }
 
 /* Hover effect for links */
@@ -186,7 +95,7 @@ body {
 .dropdown {
   position: relative;
   display: inline-block;
-  margin: 0 15px; /*Align it with other buttons */
+  margin: 0 15px; /* Align it with other buttons */
   border-radius: 8px;
 }
 
@@ -197,7 +106,6 @@ body {
   border: none;
   cursor: pointer;
   font-weight: bold;
-  /* transition: color 0.3s, transform 0.2s, box-shadow 0.2s; */
   padding: 5px 10px; /* Add padding to ensure the button looks good */
 }
 
@@ -220,11 +128,9 @@ body {
   background-color: #4CAF50;
   margin-top: 2px;
   margin-right: 20px;
-  min-width:max-content;
+  min-width: max-content;
   border-radius: 8px;
-  
   z-index: 1;
-  
 }
 
 .dropdown-content a {
@@ -236,227 +142,87 @@ body {
 }
 
 .dropdown-content a:hover {
-  /* background-color: #3e8e41; */
-  background-color: #e4e4e4;
-  color: #333; /* Adjust the text color when hovering */
+  background-color: #333;
+  color:  #e4e4e4;/* Adjust the text color when hovering */
 }
 
-/* Show the dropdown menu when hovering over the button */
 .dropdown:hover .dropdown-content {
   display: block;
-}
-
-/* Main Content Section */
-main {
-  margin-top: -7em;
-  flex: 1; /* This ensures the main content takes up remaining space */
-  display: flex;
-  flex-direction:row;
-  justify-content: center; /* Center content horizontally */
-  align-items: center; /* Center content vertically */
-  padding: 20px;
-  /* margin-left: 10vw; Adds margin from the left side of the window */
 }
 
 /* Main Content Layout */
 .main-content {
   display: flex;
-  justify-content: space-between; /* Space between text and image */
+  flex-direction: row; /* Text on the left and image on the right */
+  justify-content: space-between; /* Space out the text and image */
   align-items: center; /* Vertically center the items */
   width: 100%;
-  padding: 0 5%; /* Add equal margins to left and right sides */
+  padding: 0 5%; /* Add padding to the sides */
+  gap: 20px; /* Optional: add spacing between the elements */
 }
 
 /* Text Container */
 .text-container {
-  width: 50%; /* Take up half of the screen width */
-  padding-right: 20px;
-}
-
-.text-container h1 {
-  font-size: 2em;
-  margin-bottom: 20px;
-}
-
-.text-container p {
-  font-size: 1.2em;
-  margin-bottom: 10px;
+  flex: 1; /* Allow the text to take up remaining space */
+  text-align: left; /* Align the text to the left */
+  margin-left: 0; /* Remove the left margin for proper spacing */
+  font-size: 23px;
+  color: #cac5c5;
 }
 
 /* Image Container */
 .image-container {
-  width: 50%; /* Take up the other half of the screen width */
+  flex: 1; /* Allow the image to take up remaining space */
   display: flex;
   justify-content: center; /* Center the image horizontally */
   align-items: center; /* Center the image vertically */
-  padding-right: 5%; /* Add padding on the right side */
 }
 
 .profile-image {
-  width: 90%; /* Adjust image size to 80% of container width */
-  max-width: 75%; /* Set a maximum width for the image */
-  height: auto;
-  border-radius: 50%; /* Optional: make the image circular */
-  /*box-shadow: 0px 0px 50px rgba(0, 0, 0, .3);  Drop shadow */
+  width: 47vh; /* Adjust image size */
+  /* max-width: 75%; */ /* Set a maximum width for the image */
+  /* height: 32vw; */ /* Maintain aspect ratio */
+  border-radius: 50%; /* Make the image round */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: add a shadow for effect */
+  margin-right: 5vw;
 }
 
-/* Hover effect for boxes */
-.contact-box:hover {
-  /* transform: scale(1.01); Slightly enlarge the box */
-  cursor: pointer;
+/* Responsive Adjustments for Smaller Screens */
+@media (max-width: 768px) {
+  .main-content {
+      flex-direction: column; /* Stack the text and image vertically */
+      text-align: center; /* Center-align text for better readability */
+      gap: 10px; /* Reduce spacing between text and image */
+  }
+
+  .text-container {
+      width: 100%; /* Full width for smaller screens */
+      margin: 0; /* Remove margins */
+      padding: 0 10px; /* Add some padding for spacing */
+  }
+
+  .image-container {
+      width: 100%; /* Full width for smaller screens */
+      margin-top: 20px; /* Add space between text and image */
+  }
+
+  .profile-image {
+    width: 90%; /* Adjust image size */
+    max-width: 75%; /* Set a maximum width for the image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%; /* Make the image round */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: add a shadow for effect */
+  }
 }
 
-/* Footer Box Style */
+/* Footer */
 .footer-box {
-  width: 100%; /* Ensure it spans the full width */
-  background-color: #333;
-  color: #ffffff;
+  background-color:  #363636;
+  color: #cac5c5;
   text-align: center;
-  padding: 20px 0; /* Add padding for spacing */
-  font-size: 14px;
-  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow */
-  margin-top: auto; /* Push to the bottom if in flex container */
-}
-
-.footer-box nav {
-  margin-top: 10px; /* Space for nav links */
-}
-
-.footer-link {
-  color: #ffffff;
-  margin: 0 10px;
-  text-decoration: none;
-  font-weight: bold;
-  /* transition: color 0.3s; */
-}
-
-.footer-link:hover {
-  color: #00771e;
-}
-
-/* Responsive Design: On smaller screens, the layout changes */
-@media (max-width: 601px) {
-  .header-box {
-    display: flex;
-    flex-direction:column; /* Stack header items vertically */
-    align-items: center;
-    padding: 10px;
-  }
-
-  .main-content {
-    flex-direction: column; /* Stack the text and image vertically */
-    text-align: center; /* Center the text */
-  }
-
-  .image-container {
-    order: -1; /* Move the image above the text */
-  }
-
-  .text-container, .image-container {
-    width: 100%; /* Full width for both text and image containers */
-    padding: 10px; /* Less padding on smaller screens */
-  }
-
-  .contact-box {
-    width: 80vw; /* Adjust width for smaller screens */
-  }
-
-  .box-image {
-    max-height: 50%; /* Reduce image size for smaller screens */
-    max-width: 50%;
-    margin-right: 30%;
-  }
-
-  .image-text-content {
-    flex-direction: column; /* Stack image above text on small screens */
-    gap: 5px; /* Reduce gap */
-    
-  }
-}
-
-/* Responsive Design: On smaller screens, the layout changes */
-@media (max-width: 600px) {
-  .header-box {
-    flex-direction: column; /* Stack header items vertically */
-    align-items: center;
-    padding: 10px;
-  }
-
-  .main-content {
-    flex-direction: column; /* Stack the text and image vertically */
-    text-align: center; /* Center the text */
-  }
-  
-  .image-container {
-    order: -1; /* Move the image above the text */
-  }
-  
-  .text-container, .image-container {
-    width: 100%; /* Full width for both text and image containers */
-    padding: 10px; /* Less padding on smaller screens */
-  }
-  
-  .contact-info {
-    /* position: absolute; Position it absolutely within the parent container */
-    /* margin-top: 20%; Center vertically */
-    left: 50%; /* Center horizontally */
-    transform: translate(0%, 200%); /*Correct centering by moving the element back by 50% of its size */
-    text-align: center;
-    /* font-size: 1rem; Adjust font size as needed */
-    font-weight: bold;
-    color: #333; /* Adjust color as per your design */
-  }
-  
-  .contact-info p {
-    /* text-align: center; */
-    /* justify-content: center; */
-    /* position:absolute; */
-    transform: translate(-15%, -120%); /*Correct centering by moving the element back by 50% of its size */
-    margin: 0; /* Removes default margin to avoid misalignment */
-    transform: tt;
-    font-size: 2rem; /*Adjust font size for visibility*/
-    font-weight: bold; /* Optional: make the text bold */
-    color: #333; /* Adjust color as per your design */
-  }
-
-  /* Contact Box Container Style */
-  .contact-box-container {
-    display: flex; /* Switch to flexbox */
-    flex-direction: column; /* Stack the boxes vertically */
-    gap: 20px; /* Space between boxes */
-    padding: 20px; /* Add padding around the grid */
-    background-color: #f4f4f4; /* Optional: background color for the grid */
-    justify-content: center; /* Center the items horizontally */
-    /* align-items: center; */ /* Center items vertically (optional) */
-    /* height: auto; Allow the height to adjust based on content */
-  }
-  
-  /* Style for each box */
-  .contact-box {
-    width: 62%; /* Adjust the width to be a percentage of the viewport width */
-    margin-right: 10%;
-    height: 10%; /* Fixed height of each box */
-    background-color: #4CAF50; /* Box background color */
-    color: white; /* Text color */
-    font-size: 16px; /* Text size */
-    display: flex; /* Use flex to center content within the box */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    border-radius: 8px; /* Optional: rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: add shadow */
-    text-align: center; /* Center text inside the box */
-    /* transition: transform 0.3s; Add hover effect */
-    font-weight: 900;
-    font-size: x-large;
-  }
-  .box-image {
-    max-height: 50%; /* Reduce image size for smaller screens */
-    max-width: 50%;
-    margin-right: 30%;
-  }
-  
-  .image-text-content {
-    flex-direction: column; /* Stack image above text on small screens */
-    gap: 5px; /* Reduce gap */
-  }
+  font-size: 12pt;
+  padding: 10px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
 }
