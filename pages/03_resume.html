@@ -1,24 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Home</title>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-        <link rel="stylesheet" href="https://fontsgeek.com/fonts/Gotham-Book">
-        <link rel="stylesheet" href="../styleSheet/visuaLogic.css">
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Resume</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto" />
+        <link rel="stylesheet" href="https://fontsgeek.com/fonts/Gotham-Book" />
+        <link rel="stylesheet" href="../styleSheet/visuaLogic.css" />
     </head>
-    
+
     <body id="mainPage_BG">
         <!-- Header Box -->
         <div class="header-box">
             <div class="logo-container">
                 <a href="https://irtaza-a.github.io/home/">
-                    <img src="https://raw.githubusercontent.com/irtaza-a/home/16d3ac7247f86b88eac044e857adc52f2eb94b3e/images/logo_full.svg" alt="Logo" class="logo" style="transform: scale(1.5);">
-                    <!-- <img src="/images/logo_full.svg" alt="Logo" class="logo" style="transform: scale(1.5);"> -->
+                    <img
+                        src="https://raw.githubusercontent.com/irtaza-a/home/16d3ac7247f86b88eac044e857adc52f2eb94b3e/images/logo_full.svg"
+                        alt="Logo"
+                        class="logo"
+                        style="transform: scale(1.5);" />
                 </a>
-                <a href="https://irtaza-a.github.io/home/" class="logo-text" style="font-weight: bolder; padding-left: 4%;">Irtaza Ansari's Portfolio</a>
+                <a
+                    href="https://irtaza-a.github.io/home/"
+                    class="logo-text"
+                    style="font-weight: bolder; padding-left: 4%;">
+                    Irtaza Ansari's Portfolio
+                </a>
             </div>
             <div class="nav-container">
                 <a href="https://irtaza-a.github.io/home/pages/02_projects.html" class="nav-link">Projects</a>
@@ -26,25 +34,37 @@
                 <a href="https://irtaza-a.github.io/home/pages/04_contact.html" class="nav-link">Contact</a>
             </div>
         </div>
-        
+
         <!-- Main Content -->
         <main>
-            <section class="main-content">
-                <!-- Text Container (Now on the left) -->
-                <div class="text-container" style="align-items: center;">
-                    <h1 >LinkedIn</h1>
-                </div>
-                <!-- Image Container (Now on the right) -->
-                <div class="image-container">
-                    <!-- <img src="./images/wa_dp.png" alt="Your Picture" class="profile-image"> -->
-                </div>
+            <section class="main-content" style="display: flex; flex-direction: column; align-items: center; padding: 2rem;">
+                <h1 style="font-size: 2.5rem; margin-bottom: 1rem;">My Resume</h1>
+
+                <!-- Embedded PDF Resume -->
+                <iframe
+                    src="https://irtaza-a.github.io/home/assets/Rev%201%20-%20Irtaza_Ansari_Resume%20-%20Apr%2015,%202025.pdf"
+                    width="90%"
+                    height="800px"
+                    style="border: 1px solid #ccc; border-radius: 8px;"
+                    title="Resume PDF Viewer">
+                </iframe>
+
+                <!-- Fallback View/Download Link -->
+                <p style="margin-top: 1.5rem; font-size: 1.2rem;">
+                    Having trouble viewing? 
+                    <a
+                        href="https://irtaza-a.github.io/home/assets/Rev%201%20-%20Irtaza_Ansari_Resume%20-%20Apr%2015,%202025.pdf"
+                        target="_blank"
+                        style="color: #007bff; text-decoration: underline;">
+                        Click here to view/download the PDF
+                    </a>.
+                </p>
             </section>
         </main>
-        
+
         <!-- Footer Box -->
         <footer class="footer-box">
             <p>© 2024 Irtaza Ansari.</p>
         </footer>
-
     </body>
 </html>
