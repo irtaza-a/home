@@ -280,10 +280,3 @@ main {
     position: relative;
   }
 }
-
-/* hide desktop nav, show hamburger under 800px */
-@media (max-width: 800px) {
-  .nav-container    { display: none; }
-  .hamburger-menu   { display: block; }
-  .header-box       { position: relative; }
-}

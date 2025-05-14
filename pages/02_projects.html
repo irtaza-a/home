@@ -7,8 +7,14 @@
   
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto" />
   <link rel="stylesheet" href="https://fontsgeek.com/fonts/Gotham-Book" />
-  <link rel="stylesheet" href="/styleSheet/visaLogic-projects.css" />
+  <link rel="stylesheet" href="../styleSheet/visaLogic-projects.css" />
   
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("navMenu");
+      menu.classList.toggle("show");
+    }
+  </script>
 </head>
 
 <body id="mainPage_BG">
@@ -44,10 +50,10 @@
           <div class="image-text-content">
             <div>
               <a
-              href="https://irtaza-a.github.io/irtaza-cpsc581/"
-              class="contact-link"
-              target="_blank"
-              style="
+                href="https://irtaza-a.github.io/irtaza-cpsc581/"
+                class="contact-link"
+                target="_blank"
+                style="
                   font-weight: bold;
                   font-size: 23px;
                   text-decoration: none;
@@ -79,10 +85,10 @@
           <div class="image-text-content">
             <div>
               <a
-              href="https://github.com/irtaza-a/AR_VisualApp"
-              target="_blank"
-              class="contact-link"
-              style="
+                href="https://github.com/irtaza-a/AR_VisualApp"
+                target="_blank"
+                class="contact-link"
+                style="
                   font-weight: bold;
                   font-size: 23px;
                   text-decoration: none;
@@ -101,10 +107,10 @@
           <div class="image-text-content">
             <div>
               <a
-              class="contact-link"
-              target="_blank"
-              href="https://irtaza-a.github.io/irtaza-cpsc581/"
-              style="
+                class="contact-link"
+                target="_blank"
+                href="https://irtaza-a.github.io/irtaza-cpsc581/"
+                style="
                   font-weight: bold;
                   font-size: 23px;
                   text-decoration: none;
@@ -178,11 +184,19 @@
           clip: auto !important;
           ">
           </div>
-            <script>
-              function toggleMenu() {
-                const menu = document.getElementById("navMenu");
-                menu.classList.toggle("show");
-              }
+          <script>
+            document.addEventListener("DOMContentLoaded", function () {
+              const hamburger = document.querySelector(".hamburger-menu");
+              const mobileNav = document.querySelector(".mobile-nav");
+              
+              hamburger.addEventListener("click", function () {
+                if (mobileNav.style.display === "flex") {
+                  mobileNav.style.display = "none";
+                } else {
+                  mobileNav.style.display = "flex";
+                }
+              });
+            });
             </script>
         </body>
         </html>
