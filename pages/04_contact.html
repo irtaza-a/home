@@ -1,80 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Contact</title>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-        <link rel="stylesheet" href="https://fontsgeek.com/fonts/Gotham-Book">
-        <link rel="stylesheet" href="../styleSheet/visaLogic-contact.css">
-    </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto" />
+  <link rel="stylesheet" href="https://fontsgeek.com/fonts/Gotham-Book" />
+  <link rel="stylesheet" href="../styleSheet/visaLogic-projects.css" />
+  
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("navMenu");
+      menu.classList.toggle("show");
+    }
+  </script>
+</head>
 
-    <body id="mainPage_BG">
-        <!-- Header Box -->
-        <div class="header-box">
-            <div class="logo-container">
-                <a href="https://irtaza-a.github.io/home/">
-                    <img src="https://raw.githubusercontent.com/irtaza-a/home/16d3ac7247f86b88eac044e857adc52f2eb94b3e/images/logo_full.svg" alt="Logo" class="logo" style="transform: scale(1.5);">
-                    <!-- <img src="/images/logo_full.svg" alt="Logo" class="logo" style="transform: scale(1.5);"> -->
-                </a>
-                <a href="https://irtaza-a.github.io/home/" class="logo-text" style="font-weight: bolder; padding-left: 4%;">Irtaza Ansari's Portfolio</a>
-            </div>
-            <div class="nav-container">
-                <a href="https://irtaza-a.github.io/home/pages/02_projects.html" class="nav-link">Projects</a>
-                <a href="https://irtaza-a.github.io/home/pages/03_resume.html" class="nav-link">Resume</a>
-                <a href="https://irtaza-a.github.io/home/pages/04_contact.html" class="nav-link">Contact</a>
-            </div>
-        </div>
-        
-        <!-- Main Content -->
-        <div class="contact-info">
-            <p>Contact Info</p>
-        </div>
-        <main>
-            <div class="contact-box-container">
-                <div class="contact-box">
-                    <div class="image-text-content">
-                        <img src="../images/linkedin.png" alt="LinkedIn Logo" class="box-image">
-                        <div>
-                          <p style="font-weight: bold; font-size: 25px; margin-bottom: 5%;">LinkedIn</p>
-                            <a href="www.linkedin.com/in/irtaza-ansari-a1367b82" target="_blank" class="contact-link">www.linkedin.com/in/irtaza-ansari-a1367b82</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="contact-box">
-                    <div class="image-text-content">
-                        <img src="../images/github.png" alt="GitHub Logo" class="box-image">
-                        <div>
-                          <p style="font-weight: bold; font-size: 25px; margin-bottom: 5%;">GitHub</p>
-                            <a href="https://github.com/irtaza-a/" target="_blank" class="contact-link">https://github.com/irtaza-a/</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="contact-box">
-                    <div class="image-text-content">
-                        <img src="../images/email.png" alt="Email Logo" class="box-image">
-                        <div>
-                            <p style="font-weight: bold; font-size: 20px;">Email</p>
-                            <a href="mailto:irtaza.a.a@hotmail.com" class="contact-link">irtaza.a.a@hotmail.com</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="contact-box">
-                    <div class="image-text-content">
-                        <img src="../images/workingHours.png" alt="Hours Logo" class="box-image">
-                        <div>
-                            <p style="font-weight: bold; font-size: 20px;">Working Hours</p>
-                            <p>Mon-Fri: 9AM - 5PM</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </main>
+<body id="mainPage_BG">
+  <!-- Header Box -->
+  <div class="header-box">
+    <div class="logo-container">
+      <a href="https://irtaza-a.github.io/home/">
+        <img src="https://raw.githubusercontent.com/irtaza-a/home/16d3ac7247f86b88eac044e857adc52f2eb94b3e/images/logo_full.svg" alt="Logo" class="logo" style="transform: scale(1.5);" />
+      </a>
+      <a href="https://irtaza-a.github.io/home/" class="logo-text" style="font-weight: bolder; padding-left: 4%;">
+        Irtaza Ansari's Portfolio
+      </a>
+    </div>
 
-        <!-- Footer Box -->
-        <footer class="footer-box">
-            <p>© 2024 Irtaza Ansari.</p>
-        </footer>
-    </body>
+    <!-- Hamburger Menu Button -->
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+    <!-- Navigation Links -->`
+    <div class="nav-container" id="navMenu">
+      <a href="https://irtaza-a.github.io/home/pages/02_projects.html" class="nav-link">Projects</a>
+      <a href="https://irtaza-a.github.io/home/pages/03_resume.html" class="nav-link">Resume</a>
+      <a href="https://irtaza-a.github.io/home/pages/04_contact.html" class="nav-link">Contact</a>
+    </div>
+  </div>
+
+    <!-- Main Content -->
+    <div class="contact-info">
+        <p>Contact Info</p>
+    </div>
+    <main>
+        <div class="contact-box-container">
+            <div class="contact-box">
+                <div class="image-text-content">
+                    <img
+                        src="../images/linkedin.png"
+                        alt="LinkedIn Logo"
+                        class="box-image"
+                        style="
+                            margin-right: 10%;
+                            margin-left: 4%;">
+                    <div>
+                        <a
+                            href="https://www.linkedin.com/in/irtaza-ansari-a1367b82"
+                            class="contact-link"
+                            target="_blank"
+                            style="
+                                font-weight: bold;
+                                font-size: 5vw;
+                                margin-top: 3vh;
+                                text-decoration: none;
+                                margin-bottom: 0%;
+                                display: inline-block;">
+                        LinkedIn
+                    </a>
+                </div>
+                </div>
+            </div>
+            <div class="contact-box">
+                <div class="image-text-content">
+                    <img
+                        src="../images/github.png"
+                        alt="LinkedIn Logo"
+                        class="box-image"
+                        style="
+                            margin-right: 10%;
+                            margin-left: 4%;">
+                    <div>
+                        <a
+                            href="https://github.com/irtaza-a/"
+                            class="contact-link"
+                            target="_blank"
+                            style="
+                                font-weight: bold;
+                                font-size: 5vw;
+                                margin-top: 3vh;
+                                text-decoration: none;
+                                margin-bottom: 0%;
+                                display: inline-block;">
+                        GitHub
+                    </a>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-box">
+                <div class="image-text-content">
+                    <img
+                        src="../images/email.png"
+                        alt="LinkedIn Logo"
+                        class="box-image"
+                        style="
+                            margin-right: 10%;
+                            margin-left: 4%;">
+                    <div>
+                        <a
+                            href="mailto:irtaza.a.a@hotmail.com"
+                            class="contact-link"
+                            target="_blank"
+                            style="
+                                font-weight: bold;
+                                font-size: 5vw;
+                                margin-top: 3vh;
+                                text-decoration: none;
+                                margin-bottom: 0%;
+                                display: inline-block;">
+                        Email
+                    </a>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="contact-box">
+                <div class="image-text-content">
+                    <img src="../images/workingHours.png" alt="Hours Logo" class="box-image">
+                    <div>
+                        <p style="font-weight: bold; font-size: 20px;">Working Hours</p>
+                        <p>Mon-Fri: 9AM - 5PM</p>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </main>
+
+    <!-- Footer Box -->
+    <footer class="footer-box">
+        <p>© 2024 Irtaza Ansari.</p>
+    </footer>
+
+
+</body>
 </html>

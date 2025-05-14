@@ -1,53 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Home</title>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-        <link rel="stylesheet" href="https://fontsgeek.com/fonts/Gotham-Book">
-        <link rel="stylesheet" href="./styleSheet/visuaLogic.css">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Montserrat:400,700&display=swap">
+    <link rel="stylesheet" href="./styleSheet/visuaLogic.css">
+</head>
 
-    <body id="mainPage_BG">
-        <!-- Header Box -->
-        <div class="header-box">
-            <div class="logo-container">
-                <a href="https://irtaza-a.github.io/home/">
-                    <img src="https://raw.githubusercontent.com/irtaza-a/home/16d3ac7247f86b88eac044e857adc52f2eb94b3e/images/logo_full.svg" alt="Logo" class="logo" style="transform: scale(1.5);">
-                    <!-- <img src="/images/logo_full.svg" alt="Logo" class="logo" style="transform: scale(1.5);"> -->
-                </a>
-                <a href="https://irtaza-a.github.io/home/" class="logo-text" style="font-weight: bolder; padding-left: 4%;">Irtaza Ansari's Portfolio</a>
-            </div>
-            <div class="nav-container">
-                <a href="https://irtaza-a.github.io/home/pages/02_projects.html" class="nav-link">Projects</a>
-                <a href="https://irtaza-a.github.io/home/pages/03_resume.html" class="nav-link">Resume</a>
-                <a href="https://irtaza-a.github.io/home/pages/04_contact.html" class="nav-link">Contact</a>
-            </div>
+<body id="mainPage_BG">
+    <!-- Header Box -->
+    <div class="header-box">
+        <div class="logo-container">
+            <a href="https://irtaza-a.github.io/home/">
+                <img src="https://raw.githubusercontent.com/irtaza-a/home/16d3ac7247f86b88eac044e857adc52f2eb94b3e/images/logo_full.svg" alt="Logo" class="logo" style="transform: scale(1.5);">
+            </a>
+            <a href="https://irtaza-a.github.io/home/" class="logo-text" style="font-weight: bolder; padding-left: 4%;">Irtaza Ansari's Portfolio</a>
         </div>
-        
-        <!-- Main Content -->
-        <main>
-            <section class="main-content">
-                <div class="text-container" style="margin-left: 10vw;">
-                    <h1>Hello There!</h1>
-                    <p>Welcome to my portfolio website where I share my journey in computer science, including projects, skills, and aspirations.</p>
-                    <p>I recently graduated with a Bachelor of Science in Computer Science from the University of Calgary, and I'm excited to dive into the tech world.</p>
-                    <p>Feel free to explore my work and connect with me through social media or email!</p>
-                </div>
-                <div class="image-container">
-                    <img src="./images/wa_dp.png" alt="Your Picture" class="profile-image">
-                </div>
-            </section>
-        </main>
-        
-        <!-- Footer Box -->
-        <footer class="footer-box">
-            <p>© 2024 Irtaza Ansari.</p>
-        </footer>
+        <div class="nav-container">
+            <a href="https://irtaza-a.github.io/home/pages/02_projects.html" class="nav-link">Projects</a>
+            <a href="https://irtaza-a.github.io/home/pages/03_resume.html" class="nav-link">Resume</a>
+            <a href="https://irtaza-a.github.io/home/pages/04_contact.html" class="nav-link">Contact</a>
+        </div>
 
-        <!-- JavaScript -->
-        <script type="module" src="./scripts/logic.js"></script>
+        <!-- Hamburger Menu (for mobile) -->
+        <div class="hamburger-menu" onclick="toggleMenu()" aria-label="Toggle navigation menu">
+            ☰
+        </div>
+        <div id="mobile-nav" class="mobile-nav">
+            <a href="https://irtaza-a.github.io/home/pages/02_projects.html" class="nav-link">Projects</a>
+            <a href="https://irtaza-a.github.io/home/pages/03_resume.html" class="nav-link">Resume</a>
+            <a href="https://irtaza-a.github.io/home/pages/04_contact.html" class="nav-link">Contact</a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <section class="main-content">
+            <div class="text-container" style="margin-left: 10vw;">
+                <h1>Hello There!</h1>
+                <p>Welcome to my portfolio website where I share my journey in computer science, including projects, skills, and aspirations.</p>
+                <p>I recently graduated with a Bachelor of Science in Computer Science from the University of Calgary, and I'm excited to dive into the tech world.</p>
+                <p>Feel free to explore my work and connect with me through social media or email!</p>
+            </div>
+            <div class="image-container">
+                <img src="./images/wa_dp.png" alt="Irtaza Ansari's profile picture" class="profile-image">
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-box">
+        <p>© 2024 Irtaza Ansari.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const hamburger = document.querySelector(".hamburger-menu");
+            const mobileNav = document.querySelector(".mobile-nav");
+            
+            hamburger.addEventListener("click", function () {
+                if (mobileNav.style.display === "flex") {
+                    mobileNav.style.display = "none";
+                } else {
+                    mobileNav.style.display = "flex";
+                }
+            });
+        });
+        </script>
     </body>
-</html>
+    </html>
+    

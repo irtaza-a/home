@@ -7,7 +7,7 @@
   
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto" />
   <link rel="stylesheet" href="https://fontsgeek.com/fonts/Gotham-Book" />
-  <link rel="stylesheet" href="../styleSheet/visaLogic-contact.css" />
+  <link rel="stylesheet" href="../styleSheet/visaLogic-projects.css" />
   
   <script>
     function toggleMenu() {
@@ -182,4 +182,21 @@
           z-index: 2147483647 !important;
           background: none !important;
           clip: auto !important;
-          "></div></body></html>
+          ">
+          </div>
+          <script>
+            document.addEventListener("DOMContentLoaded", function () {
+              const hamburger = document.querySelector(".hamburger-menu");
+              const mobileNav = document.querySelector(".mobile-nav");
+              
+              hamburger.addEventListener("click", function () {
+                if (mobileNav.style.display === "flex") {
+                  mobileNav.style.display = "none";
+                } else {
+                  mobileNav.style.display = "flex";
+                }
+              });
+            });
+            </script>
+        </body>
+        </html>

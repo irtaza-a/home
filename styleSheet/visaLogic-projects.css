@@ -24,7 +24,7 @@ main {
 
 /* Header Styles */
 .header-box {
-    display: flex;
+    display:flex;
     align-items: center; /* Vertically center the items */
     justify-content: space-between; /* Space out the logo and navigation */
     background-color: #4CAF50; /* Green background */
@@ -40,6 +40,7 @@ main {
     flex-wrap: nowrap; /* Prevent wrapping */
     white-space: nowrap; /* Keep text in a single line */
     color: #f1f1f1;
+    margin-right: 30%;
 }
 
 .logo {
@@ -62,10 +63,11 @@ main {
 /* Navigation Container */
 .nav-container {
     display: flex;
-    justify-content: flex-end; /* Align the links to the right */
     align-items: center; /* Vertically center the items */
-    margin-left: 14vw; /* Adds margin from the left side of the window */
-    margin-right: 14vw; /* Adds margin from the left side of the window */
+    margin-left: 10vw; /* Adds margin from the left side of the window */
+    margin-right: 10vw; /* Adds margin from the left side of the window */
+    width:2px!;
+    border-radius: 8px;
 }
 
 /* Navigation Links */
