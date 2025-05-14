@@ -178,14 +178,11 @@
           clip: auto !important;
           ">
           </div>
-          <script>
-            document.addEventListener("DOMContentLoaded", () => {
-              const hamburger = document.querySelector(".hamburger-menu");
-              const mobileNav  = document.getElementById("mobile-nav");
-              hamburger.addEventListener("click", () => {
-                mobileNav.classList.toggle("show");
-              });
-            });
-          </script>
+            <script>
+              function toggleMenu() {
+                const menu = document.getElementById("navMenu");
+                menu.classList.toggle("show");
+              }
+            </script>
         </body>
         </html>
