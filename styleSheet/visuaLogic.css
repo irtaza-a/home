@@ -215,7 +215,7 @@ main {
   }
 }
 
-/* Footer */
+/* Footer
 .footer-box {
   background-color:  #363636;
   color: #cac5c5;
@@ -225,6 +225,20 @@ main {
   position: relative;
   bottom: 0;
   width: 100%;
+} */
+
+/* Floating Bottom Bar */
+.footer-box {
+    background-color: #363636;
+    color: #cac5c5;
+    text-align: center;
+    font-size: 12pt;
+    padding: 10px 0;
+    position: fixed;     /* Stays fixed on the viewport */
+    bottom: 0;           /* Stick to bottom */
+    left: 0;             /* Align to left edge */
+    width: 100vw;        /* Full viewport width */
+    z-index: 10000;      /* Make sure it’s on top */
 }
 
 /* Hamburger menu styles */

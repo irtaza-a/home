@@ -1,5 +1,7 @@
 /* Reset basic styles */
-html, body {
+
+
+.html, body {
     margin: 0;
     padding: 0;
     height: 100%;
@@ -36,7 +38,7 @@ main {
 .logo-container {
     display: flex;
     align-items: center; /* Align items (logo and text) vertically */
-    margin-left: 14vw; /* Adds margin from the left side of the window */
+    margin-left: 7%; /* Adds margin from the left side of the window */
     flex-wrap: nowrap; /* Prevent wrapping */
     white-space: nowrap; /* Keep text in a single line */
     color: #f1f1f1;
@@ -65,8 +67,8 @@ main {
     display: flex;
     align-items: center; /* Vertically center the items */
     margin-left: 10vw; /* Adds margin from the left side of the window */
-    margin-right: 10vw; /* Adds margin from the left side of the window */
-    width:2px!;
+    margin-right: 10vw; /* Adds margin from the right side of the window */
+    /* width:2px!; */
     border-radius: 8px;
 }
 
@@ -74,11 +76,12 @@ main {
 .nav-link {
     color: #ffffff;
     font-size: 18px;
-    margin: 0 15px; /* Align it with other buttons */
+    margin: 10px 15px; /* Align it with other buttons */
     text-decoration: none;
     font-weight: bold;
-    padding: 5px 10px; /* Add padding to ensure the button looks good */
+    padding: 8px 12px; /* Add padding to ensure the button looks good */
     border-radius: 8px;
+    display: inline-block;
 }
 
 /* Hover effect for links */
@@ -220,17 +223,33 @@ main {
     text-decoration: underline;
 }
 
-/* Footer */
-.footer-box {
+/* Footer
+#footer-box {
     background-color:  #363636;
     color: #cac5c5;
     text-align: center;
     font-size: 12pt;
     padding: 10px;
-    position: relative;
+    position: absolute;
     bottom: 0;
-    width: 100%;
-  }
+    width: 100vw;
+    z-index: +10000;
+    margin-left: -30%;
+  } */
+
+/* Floating Bottom Bar */
+.footer-box {
+    background-color: #363636;
+    color: #cac5c5;
+    text-align: center;
+    font-size: 12pt;
+    padding: 10px 0;
+    position: fixed;     /* Stays fixed on the viewport */
+    bottom: 0;           /* Stick to bottom */
+    left: 0;             /* Align to left edge */
+    width: 100vw;        /* Full viewport width */
+    z-index: 10000;      /* Make sure it’s on top */
+}
 
 
 
@@ -274,12 +293,20 @@ main {
         /* transform: scale(1.0); Same hover effect */
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Same shadow effect */
     }
+
+    .footer-box{
+        /* margin-left: -30%; */
+        width: 100%;
+        position: relative;
+        margin-top: auto;
+    }
 }
 
 /* Hamburger icon hidden by default */
 .hamburger {
+    margin-left: 25%;
     display: none;
-    font-size: 28px;
+    font-size: 40px;
     color: white;
     cursor: pointer;
     padding-right: 14vw;
@@ -290,12 +317,13 @@ main {
     display: flex;
     flex-direction: column;
     position: absolute;
-    right: 0;
+    right: -10%;
     top: 70px;
     background-color: #4CAF50;
     padding: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     width: 200px;
+    height: 150px;
     z-index: 999;
 }
 
