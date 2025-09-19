@@ -1,0 +1,298 @@
+/* === Global Styles === */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #232323;
+    font-family: 'Gotham', sans-serif;
+}
+
+body {
+  /* font-family: Arial, sans-serif; */
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  color: #e4e4e4;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* === Top Banner === */
+.top-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: #007bff; */
+  background-color: #4caf50;
+  color: white;
+  /* padding: 0.75rem 1.5rem; */
+  padding: 1rem 1.5rem;
+}
+
+.top-banner .logo {
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+.top-banner .nav-tabs a {
+  /* color: white;
+  margin-left: 1rem;
+  font-weight: 500; */
+  background: #ffffff22;       /* translucent white box (works on green banner) */
+  padding: 0.4rem 0.8rem;      /* balanced size for banner height */
+  border-radius: 8px;          /* rounded corners */
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.top-banner .nav-tabs a:hover {
+  /* text-decoration: underline; */
+  background: #ffffff44;       /* slightly stronger highlight */
+  transform: translateY(-2px); /* tiny lift effect */
+  text-decoration: none;       /* override underline on hover */
+}
+
+/* === Main Content === */
+
+/* main#content {
+  margin: 2rem 1.5rem;
+  min-height: 60vh;
+} */
+main#content {
+    flex: 1; /* takes all remaining space */
+    margin: 2rem 1.5rem;
+}
+
+
+/* Center all headings and paragraphs inside main#content */
+main#content h1,
+main#content h2,
+main#content h3,
+main#content p {
+    text-align: center;
+}
+
+
+
+/* Markdown standard formatting */
+main#content h1, main#content h2, main#content h3 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+main#content p {
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+/* === Projects Grid & Cards === */
+
+/* Version 1 - Original - Square Boxes*/
+/* .project-grid { */
+  /* display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem; */
+  /* display: grid; */
+  /* grid-template-columns: repeat(2, 1fr); exactly 2 columns */
+  /* gap: 1rem; */
+  /* margin-top: 1rem; */
+/* } */
+
+
+/* Version 2 - Rectangular Edge Screen Boxes*/
+/* .project-grid { */
+  /* display: grid; */
+  /* grid-template-columns: repeat(2, 1fr); exactly 2 columns */
+  /* gap: 1rem; */
+  /* margin-top: 1rem; */
+/* } */
+
+/* Version 3 - 68% Screen Width Occupancy*/
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 2fr); /* exactly 2 columns */
+  gap: 4rem;
+  margin: 2rem auto 1rem auto; /* vertical spacing + center horizontally */
+  max-width: 80vw; /* total width of both columns capped at 68% of viewport */
+  justify-content: center; /* centers the grid inside max-width */
+}
+
+@media (max-width: 768px) {
+  .project-grid {
+    grid-template-columns: 1fr; /* single column on tablets/mobile */
+    max-width: 90vw; /* occupy more width on smaller screens */
+  }
+}
+
+/* .project-card {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+} */
+
+.project-card {
+  background: rgb(250, 250, 250); /* light opaque background */
+  border: 1px solid #ccc;
+  border-radius: 10px;            /* rounded corners */
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+
+.project-card h3 {
+  /* margin-bottom: 0.5rem; */
+  margin: 0.25rem 0; /* tighter than global */
+  color: #232323;    /* darker heading text inside cards */
+}
+
+.project-card a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: #007bff;
+  color: white;
+  border-radius: 4px;
+}
+
+.project-card p {
+  margin: 0.25rem 0;
+  color: #444;       /* softer text color inside card */
+}
+
+.project-card a:hover {
+  background: #0056b3;
+}
+
+/* === Bottom Footer === */
+.bottom-footer {
+  text-align: center;
+  /* background-color: #333; */
+  background-color: #363636;
+  color: white;
+  padding: 0.7rem 0;
+  margin-top: 3rem;
+  font-size: 0.9rem;
+}
+
+/* === Navigation link default style (fallback) === */
+nav a {
+  margin-right: 1rem;
+  /* color: #007bff; */
+  color: #f6f6f6;
+  /* font-weight: 500; */
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Gotham Book */
+@font-face {
+    font-family: 'Gotham';
+    src: url('../fonts/Gotham_Book.woff2') format('woff2'),
+         url('../fonts/Gotham_Book.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Gotham Book Italic */
+@font-face {
+    font-family: 'Gotham';
+    src: url('../fonts/Gotham-BookItalic.woff2') format('woff2'),
+         url('../fonts/Gotham-BookItalic.woff') format('woff');
+    font-weight: 400;
+    font-style: italic;
+}
+
+/* Gotham Light */
+@font-face {
+    font-family: 'Gotham';
+    src: url('../fonts/Gotham-Light.woff2') format('woff2'),
+         url('../fonts/Gotham-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+/* Gotham Thin */
+@font-face {
+    font-family: 'Gotham';
+    src: url('../fonts/Gotham-Thin.woff2') format('woff2'),
+         url('../fonts/Gotham-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+}
+
+/* Gotham Thin Italic */
+@font-face {
+    font-family: 'Gotham';
+    src: url('../fonts/Gotham-ThinItalic.woff2') format('woff2'),
+         url('../fonts/Gotham-ThinItalic.woff') format('woff');
+    font-weight: 100;
+    font-style: italic;
+}
+
+/* Gotham Bold */
+@font-face {
+    font-family: 'Gotham';
+    src: url('../fonts/Gotham-Bold.woff2') format('woff2'),
+         url('../fonts/Gotham-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* Gotham Black */
+@font-face {
+    font-family: 'Gotham';
+    src: url('../fonts/Gotham-Black.woff2') format('woff2'),
+         url('../fonts/Gotham-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+/* Gotham Ultra Italic */
+@font-face {
+    font-family: 'Gotham';
+    src: url('../fonts/Gotham-UltraItalic.woff2') format('woff2'),
+         url('../fonts/Gotham-UltraItalic.woff') format('woff');
+    font-weight: 800;
+    font-style: italic;
+}
+
+/* Gotham XLight */
+@font-face {
+    font-family: 'Gotham';
+    src: url('../fonts/Gotham-XLight.woff2') format('woff2'),
+         url('../fonts/Gotham-XLight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+}
+
+/* Gotham XLight Italic */
+@font-face {
+    font-family: 'Gotham';
+    src: url('../fonts/Gotham-XLightItalic.woff2') format('woff2'),
+         url('../fonts/Gotham-XLightItalic.woff') format('woff');
+    font-weight: 200;
+    font-style: italic;
+}
